@@ -9,9 +9,9 @@ public class Graph {
     public Node startNode(){
 
         int[][] state = {
-                {4,3,2},
-                {7,5,8},
-                {1,6,0}
+                {3,0,7},
+                {2,8,1},
+                {6,4,5}
         };
 
         Node stNode = new Node(state,0,null);
@@ -22,12 +22,13 @@ public class Graph {
     }
 
     public boolean reachedDestination(Node curNode){
-        int cnt=0;
+        int cnt=1;
 
         for(int i=0;i<3;i++)
             for (int j=0;j<3;j++) {
                 if (curNode.state[i][j] != cnt) return false;
-                cnt++;
+                if(cnt == 8) cnt = 0;
+                else cnt ++;
             }
         return  true;
     }
@@ -43,7 +44,7 @@ public class Graph {
 
                     boolean flg=false;
 
-                    int cnt=0;
+                    int cnt=1;
 
                     for(int x=0;x<3;x++){
                         for(int y=0;y<3;y++){
@@ -53,7 +54,8 @@ public class Graph {
                                 flg=true;
                                 break;
                             }
-                            cnt++;
+                            if(cnt == 8) cnt = 0;
+                            else cnt ++;
                         }
                         if(flg) break;;
                     }
