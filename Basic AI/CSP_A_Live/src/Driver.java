@@ -12,16 +12,5 @@ public class Driver implements ActionListener{
 
 
     }
-    void sa()
-    {
-        JFrame frame = new JFrame();
-
-        JButton b = new JButton("Click");
-
-        ArrayList<Object> arrayList = new ArrayList<Object>();
-    }
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
+   
 }
