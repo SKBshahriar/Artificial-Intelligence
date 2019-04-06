@@ -8,7 +8,7 @@ public class Driver implements ActionListener{
 
     public static void main(String[] args) {
 
-        //CSP csp = new CSP(7);
+        CSP csp = new CSP(7);
 
 
     }
